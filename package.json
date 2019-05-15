@@ -1,12 +1,24 @@
 {
   "name": "markdown-it-base",
   "version": "1.0.0",
-  "description": "",
+  "description": "Base project for development of markdown-it plugins.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "David Hunt <git@dnotes.net> (https://dnotes.net/)",
-  "license": "MIT"
+  "keywords": [
+    "markdown-it",
+    "markdown"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "eslint": "^5.16.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-testgen": "^0.1.5",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "terser": "^3.17.0"
+  }
 }
