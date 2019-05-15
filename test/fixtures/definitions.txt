@@ -1,4 +1,4 @@
-These are test definitions. This is a title:
+These are test definitions. This is a title.
 .
 The [markdown](//daringfireball.net/markdown) above should match the html below.
 .
