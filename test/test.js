@@ -1,12 +1,5 @@
 'use strict'
 
-// TODO: these are parsed incorrectly:
-//
-// ~~~foo~~~
-// ~~~foo~ bar~~
-
-
-
 var path     = require('path')
 var generate = require('markdown-it-testgen')
 
