@@ -4,10 +4,11 @@
   "description": "Base project for development of markdown-it plugins.",
   "main": "index.js",
   "scripts": {
-    "coverage": "nyc mocha",
-    "coverage-report": "nyc mocha && nyc report -r text-lcov | coveralls",
+    "build": "make build",
+    "coverage": "yarn test && nyc report -r text-lcov | coveralls",
     "lint": "eslint .",
-    "test": "mocha --colors"
+    "pub": "yarn lint && yarn coverage && make build && make publish",
+    "test": "nyc --check-coverage --lines 100 mocha"
   },
   "keywords": [
     "markdown-it",
