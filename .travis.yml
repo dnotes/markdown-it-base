@@ -1,7 +1,7 @@
 language: node_js
 node_js:
- - '6'
  - node
+ - lts/*
 script: yarn lint && yarn coverage
 sudo: false
 # deploy: run `travis setup npm`
