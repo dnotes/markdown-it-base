@@ -40,6 +40,9 @@ build:
 		> dist/${NPM_PACKAGE}.min.js
 
 publish:
+	npm run lint || exit $$?
+	npm run test || exit $$?
+	make build
 	@if test 0 -ne `git status --porcelain | wc -l` ; then \
 		echo "Unclean working tree. Commit or stash changes first." >&2 ; \
 		exit 128 ; \
@@ -52,7 +55,7 @@ publish:
 		echo "Tag ${NPM_VERSION} exists. Update package.json" >&2 ; \
 		exit 128 ; \
 		fi
-	git tag ${NPM_VERSION} && git push ${REMOTE_NAME} ${NPM_VERSION}
+	git tag ${NPM_VERSION} && git push ${REMOTE_NAME} ${NPM_VERSION} || exit $$?
 
 .PHONY: publish browserify config
 .SILENT: config
